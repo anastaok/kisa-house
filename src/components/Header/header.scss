@@ -1,0 +1,44 @@
+.header {
+    height: 80px;
+    padding: 0 15px;
+
+    border: 1px solid #eee;
+    position: sticky;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .container-menu {
+        display: flex;
+
+        .nav-menu {
+            display: flex;
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style: none;
+                padding-right: 100px;
+            }
+            a {
+                text-decoration:none;
+                color: rgb(198, 18, 18);
+            }
+        }
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        .logo-name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
