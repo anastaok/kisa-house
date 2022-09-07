@@ -1,28 +1,19 @@
 import React from "react";
 import "./header.scss";
 
+import { FaCat } from "react-icons/fa";
+import { GiBasket } from "react-icons/gi";
+
 const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <div className="logo-img">img</div>
+        <div className="logo-img">
+          <FaCat size={30} style={{ color: "#333" }} />
+        </div>
         <div className="logo-name">
-          <div
-            style={{
-              fontFamily: "Caveat",
-              fontWeight: "bold",
-              fontSize: "1.5rem",
-            }}
-          >
-            Киса
-          </div>
-          <div
-            style={{
-              fontSize: "1.3rem",
-            }}
-          >
-            House
-          </div>
+          <div className="kisa">Киса</div>
+          <div className="house">House</div>
         </div>
       </div>
       <div className="container-menu">
@@ -37,7 +28,13 @@ const Header = () => {
             <a href="/">Контакты</a>
           </li>
         </ul>
-        <div className="cart">корзинка</div>
+        <div className="cart">
+          Корзинка
+          <GiBasket
+            size={25}
+            style={{ color: "#333", margin: "0 0 3px 3px" }}
+          />
+        </div>
       </div>
     </div>
   );

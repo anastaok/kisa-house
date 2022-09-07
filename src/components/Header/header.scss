@@ -9,12 +9,15 @@
     justify-content: space-between;
     align-items: center;
 
+    font-size: 1.2rem;
+
 
     .container-menu {
         display: flex;
 
         .nav-menu {
             display: flex;
+            align-items: center;
             padding: 0;
             margin: 0;
 
@@ -24,7 +27,14 @@
             }
             a {
                 text-decoration:none;
-                color: rgb(198, 18, 18);
+                color: #000
+            }
+
+            a:hover {
+                color: rgb(16, 16, 189);
+                font-size: 1.25rem;
+        
+                transition: 0.3s ease;
             }
         }
 
@@ -34,11 +44,40 @@
         display: flex;
         align-items: center;
 
+        cursor: pointer;
+
+        .logo-img{
+            margin-right: 3px;
+        }
+
         .logo-name{
             display: flex;
             justify-content: center;
             align-items: center;
+
+            .kisa {
+                font-family: "Rubik Bubbles";
+                font-size: 1.8rem;
+                color: #333;
+            }
+
+            .house{
+                font-size: 1.7rem;
+                color: #333;
+            }
         }
+
+    }
+
+    .cart {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .cart:hover {
+        color: rgb(154, 16, 16);
+        transition: 0.3s ease;
     }
 
 }
