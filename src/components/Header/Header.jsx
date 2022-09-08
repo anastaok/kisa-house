@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.scss";
+import "./Header.scss";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
@@ -9,7 +9,7 @@ const Header = () => {
     <div className="header">
       <div className="logo">
         <div className="logo-img">
-          <FaCat size={30} style={{ color: "#333" }} />
+          <FaCat className="icon-cat" />
         </div>
         <div className="logo-name">
           <div className="kisa">Киса</div>
@@ -30,10 +30,7 @@ const Header = () => {
         </ul>
         <div className="cart">
           Корзинка
-          <GiBasket
-            size={25}
-            style={{ color: "#333", margin: "0 0 3px 3px" }}
-          />
+          <GiBasket className="icon-bsk" />
         </div>
       </div>
     </div>

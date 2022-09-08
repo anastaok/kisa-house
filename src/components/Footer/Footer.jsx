@@ -24,39 +24,22 @@ const Footer = () => {
         </div>
         <div className="ftr-right">
           <a href="/">
-            <FaTelegram
-              size={20}
-              style={{ color: "#333", marginRight: "3px" }}
-            />
+            <FaTelegram className="icon" />
             @kisa_house
           </a>
           <a href="/">
-            <FaInstagramSquare
-              size={20}
-              style={{ color: "#333", marginRight: "3px" }}
-            />
+            <FaInstagramSquare className="icon" />
             @kisa_house
           </a>
           <a href="/">
-            <FaMailBulk
-              size={20}
-              style={{ color: "#333", marginRight: "3px" }}
-            />
+            <FaMailBulk className="icon" />
             kisa_house@gmail.com
           </a>
           <a href="/">
-            <FaPhoneSquare
-              size={20}
-              style={{ color: "#333", marginRight: "3px" }}
-            />{" "}
-            +7 (123) 456-78-91
+            <FaPhoneSquare className="icon" /> +7 (123) 456-78-91
           </a>
           <a href="/">
-            <FaMapMarkerAlt
-              size={20}
-              style={{ color: "#333", marginRight: "3px" }}
-            />{" "}
-            г. Казань, ул. Петербургская, 1
+            <FaMapMarkerAlt className="icon" /> г. Казань, ул. Петербургская, 1
           </a>
         </div>
       </div>
