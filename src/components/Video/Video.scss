@@ -1,33 +1,31 @@
 #video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 10;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10;
+  position: absolute;
 }
 
-.video {
-    height: 100vh;
-    width: 100%;
-
-    object-fit: contain;
+.video-container {
+  height: 100vh;
+  width: 100%;
+  object-fit: contain;
 }
- .text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    z-index: 15;
 
-    font-family: 'Rubik Bubbles';
-    font-size: 2rem;
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 15;
+  font-family: "Rubik Bubbles";
+  font-size: 2rem;
+  height: 68vh;
+  color: rgba($color: #ffffff, $alpha: 0.9);
+  padding: 0 20px;
 
-    height: 68vh;
-    color: rgba($color: #ffffff, $alpha: 0.9);
-    padding: 0 20px;
-
-    .left-txt{
-        margin-bottom: 42px;
-    }
+  .left-txt {
+    margin-bottom: 45px;
+  }
 }

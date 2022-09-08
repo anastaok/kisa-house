@@ -5,7 +5,7 @@ import cat from "../../content/video/cat.mp4";
 
 const Video = () => {
   return (
-    <div className="video">
+    <div className="video-container">
       <video autoPlay loop muted id="video">
         <source src={cat} type="video/mp4" />
       </video>

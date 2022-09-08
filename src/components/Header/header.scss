@@ -1,108 +1,107 @@
 .header {
-    height: 65px;
-    padding: 0 15px;
+  height: 65px;
+  padding: 0 15px;
+  background-color: #71a5f7;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
 
-    background-color: #71a5f7;
-    position: sticky;
-
+  .container-menu {
     display: flex;
-    justify-content: space-between;
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style: none;
+        padding-right: 100px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      li:hover {
+        transition: 0.3s ease;
+        transform: scale(1.1);
+      }
+
+      a:hover {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .logo-img {
+      .icon-cat {
+        margin-right: 3px;
+        font-size: 30px;
+        color: #333;
+      }
+
+      color: #eee;
+    }
+  }
+
+  .logo-name {
+    display: flex;
+    justify-content: center;
     align-items: center;
 
-    font-size: 1.2rem;
-
-
-    .container-menu {
-        display: flex;
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-
-            li {
-                list-style: none;
-                padding-right: 100px;
-            }
-            a {
-                text-decoration:none;
-                color: #000
-            }
-
-            a:hover {
-                color: rgb(255, 255, 255);
-                font-size: 1.25rem;
-                transition: 0.3s ease;
-            }
-        }
-
+    .kisa {
+      font-family: "Rubik Bubbles";
+      font-size: 1.8rem;
+      color: #333;
     }
 
-    .logo {
-        display: flex;
-        align-items: center;
-
-        cursor: pointer;
-
-        .logo-img{
-
-            .icon-cat {
-                margin-right: 3px;
-                font-size: 30px;
-                color: #333
-            }
-        }
-
-        .logo-name{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .kisa {
-                font-family: "Rubik Bubbles";
-                font-size: 1.8rem;
-                color: #333;
-            }
-
-            .house{
-                font-size: 1.7rem;
-                color: #333;
-            }
-        }
-
-        .logo-name:hover {
-            transition: 0.3s ease;
-
-            .kisa{
-                color: #fc74f9;
-            }
-            .house{
-                color: #b5e1ff;
-            }
-                }
-
+    .house {
+      font-size: 1.7rem;
+      color: #333;
     }
+  }
 
-    .cart {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
-        .icon-bsk {
-            font-size: 25px;
-            color: #333;
-            margin: 0 0 3px 3px
-        }
+  .logo-name:hover {
+    .kisa {
+      color: #fc74f9;
+      transition: 0.3s ease;
     }
-
-    .cart:hover {
-        color:rgb(255, 255, 255);
-        transition: 0.3s ease;
-
-        .icon-bsk{
-            color: red
-        }
+    .house {
+      color: #b5e1ff;
+      transition: 0.3s ease;
     }
+  }
 
+  .cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .icon-bsk {
+      font-size: 25px;
+      color: #333;
+      margin: 0 0 3px 3px;
+    }
+  }
+
+  .cart:hover {
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+    transform: scale(1.1);
+
+    .icon-bsk {
+      color: red;
+      transition: 0.3s ease;
+    }
+  }
 }
