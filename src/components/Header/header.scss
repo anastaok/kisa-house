@@ -1,9 +1,8 @@
 .header {
-    height: 80px;
+    height: 65px;
     padding: 0 15px;
 
-    background-color: rgb(240, 225, 211);
-    border: 1px solid #eee;
+    background-color: #71a5f7;
     position: sticky;
 
     display: flex;
@@ -32,7 +31,7 @@
             }
 
             a:hover {
-                color: rgb(16, 16, 189);
+                color: rgb(255, 255, 255);
                 font-size: 1.25rem;
                 transition: 0.3s ease;
             }
@@ -72,6 +71,17 @@
             }
         }
 
+        .logo-name:hover {
+            transition: 0.3s ease;
+
+            .kisa{
+                color: #fc74f9;
+            }
+            .house{
+                color: #b5e1ff;
+            }
+                }
+
     }
 
     .cart {
@@ -87,7 +97,7 @@
     }
 
     .cart:hover {
-        color: rgb(154, 16, 16);
+        color:rgb(255, 255, 255);
         transition: 0.3s ease;
 
         .icon-bsk{

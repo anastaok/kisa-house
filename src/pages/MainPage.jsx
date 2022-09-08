@@ -1,10 +1,11 @@
 import React from "react";
-import { Footer, Header } from "../components";
+import { Footer, Header, Video } from "../components";
 
 const MainPage = () => {
   return (
     <div>
       <Header />
+      <Video />
       <Footer />
     </div>
   );
