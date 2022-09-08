@@ -1,0 +1,45 @@
+.kisa-container {
+  width: 250px;
+  height: 350px;
+  background-color: #71a5f7;
+  border: 1px solid #333;
+  margin: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .photo-container {
+    width: 250px;
+    height: 260px;
+    background-color: aliceblue;
+
+    .photo {
+      width: 100%;
+      height: 100%;
+      border: #333 1px solid;
+    }
+  }
+
+  .info {
+    font-family: "Rubik Bubbles";
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 200px;
+    height: 30px;
+    background-color: #eee;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .btn:hover {
+    background-color: #fc74f9;
+    transition: 0.3s ease;
+  }
+}
