@@ -2,7 +2,6 @@
   width: 250px;
   height: 350px;
   background-color: #71a5f7;
-  border: 1px solid #333;
   margin: 15px;
   padding: 15px;
   display: flex;
@@ -13,25 +12,24 @@
   .photo-container {
     width: 250px;
     height: 260px;
-    background-color: aliceblue;
 
     .photo {
       width: 100%;
       height: 100%;
-      border: #333 1px solid;
     }
   }
 
   .info {
     font-family: "Rubik Bubbles";
     font-size: 1.5rem;
+    color: #333;
   }
 
   .btn {
+    background: rgb(96, 9, 240);
+    background: linear-gradient(0deg, rgb(113 165 247 / 0%) 0%, #e8eaf6 100%);
     width: 200px;
     height: 30px;
-    background-color: #eee;
-    border: 1px solid #333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +37,25 @@
   }
 
   .btn:hover {
-    background-color: #fc74f9;
-    transition: 0.3s ease;
+    box-shadow: 3px 3px 5px 0 rgba(255, 255, 255, 0.5),
+      -4px -4px 6px 0 rgba(116, 125, 136, 0.5),
+      inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+      inset 3px 3px 5px 0 rgba(0, 0, 0, 0.4);
   }
+
+  // .btn {
+  //   width: 200px;
+  //   height: 30px;
+  //   background-color: #eee;
+  //   border: 1px solid #333;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   font-size: 1.1rem;
+  // }
+
+  // .btn:hover {
+  //   background-color: #fc74f9;
+  //   transition: 0.3s ease;
+  // }
 }
