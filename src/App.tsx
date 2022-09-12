@@ -1,9 +1,10 @@
 import { MainPage } from "./pages";
+import { KisaPage } from "./pages";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <MainPage />
+      <KisaPage />
     </div>
   );
 };
