@@ -1,4 +1,3 @@
-import React from "react";
 import "./Video.scss";
 
 import cat from "../../content/video/cat.mp4";

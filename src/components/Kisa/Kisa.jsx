@@ -1,4 +1,3 @@
-import React from "react";
 import "./Kisa.scss";
 import cat1 from "../../content/img/1.jpg";
 

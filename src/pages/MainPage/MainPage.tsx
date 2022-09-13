@@ -1,6 +1,8 @@
-import React from "react";
 import "./MainPage.scss";
-import { Footer, Header, Kisa, Video } from "../../components";
+import Header from "../../components/Header";
+import Video from "../../components/Video";
+import Kisa from "../../components/Kisa";
+import Footer from "../../components/Footer";
 
 const MainPage = () => {
   return (
