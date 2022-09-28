@@ -1,5 +1,6 @@
 import "./Kisa.scss";
 import cat1 from "../../content/img/1.jpg";
+import Button from "../Button";
 
 const Kisa = () => {
   return (
@@ -10,9 +11,7 @@ const Kisa = () => {
         </a>
       </div>
       <div className="info">Мурзик, 3 года</div>
-      <div className="btn">
-        <p>Забрать Кису</p>
-      </div>
+      <Button text="Забрать Кису" />
     </div>
   );
 };
