@@ -2,6 +2,7 @@ import "./Header.scss";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
+import Button from "../Button";
 
 const Header = () => {
   return (
@@ -18,7 +19,7 @@ const Header = () => {
       <div className="container-menu">
         <ul className="nav-menu">
           <li>
-            <a href="/">О нас</a>
+            <a href="/">Выбрать друга</a>
           </li>
           <li>
             <a href="/">Помощь кисам</a>
