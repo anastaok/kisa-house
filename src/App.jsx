@@ -1,9 +1,9 @@
-import MainPage from "./pages/MainPage";
+import KisaPage from "./pages/KisaPage";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <MainPage />
+      <KisaPage />
     </div>
   );
 };

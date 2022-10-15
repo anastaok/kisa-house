@@ -1,5 +1,5 @@
 const KisaCart = () => {
-  return <div>KisaCart</div>;
+  return <div></div>;
 };
 
 export default KisaCart;

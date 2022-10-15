@@ -20,6 +20,7 @@
       li {
         list-style: none;
         padding-right: 100px;
+        transition: all 0.3s ease-in-out;
       }
 
       a {
@@ -28,7 +29,6 @@
       }
 
       li:hover {
-        transition: 0.3s ease;
         transform: scale(1.1);
       }
 
@@ -63,22 +63,22 @@
       font-family: "Rubik Bubbles";
       font-size: 1.8rem;
       color: #333;
+      transition: all 0.3s ease-in-out;
     }
 
     .house {
       font-size: 1.7rem;
       color: #333;
+      transition: all 0.3s ease-in-out;
     }
   }
 
   .logo-name:hover {
     .kisa {
       color: #fc74f9;
-      transition: 0.3s ease;
     }
     .house {
       color: #b5e1ff;
-      transition: 0.3s ease;
     }
   }
 
@@ -86,22 +86,22 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
     .icon-bsk {
       font-size: 25px;
       color: #333;
       margin: 0 0 3px 3px;
+      transition: all 0.3s ease-in-out;
     }
   }
 
   .cart:hover {
     color: rgb(255, 255, 255);
-    transition: 0.3s ease;
     transform: scale(1.1);
 
     .icon-bsk {
       color: red;
-      transition: 0.3s ease;
     }
   }
 }
