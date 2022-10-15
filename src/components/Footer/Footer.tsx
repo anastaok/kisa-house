@@ -7,6 +7,7 @@ import {
   FaMapMarkerAlt,
   FaPhoneSquare,
 } from "react-icons/fa";
+import Button from "../Button";
 
 const Footer = () => {
   return (

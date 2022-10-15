@@ -11,7 +11,7 @@ const Kisa = () => {
         </a>
       </div>
       <div className="info">Мурзик, 3 года</div>
-      <Button text="Забрать Кису" />
+      <Button text="Забрать Кису" width="sm" />
     </div>
   );
 };
