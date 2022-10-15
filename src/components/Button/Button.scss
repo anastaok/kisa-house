@@ -1,0 +1,21 @@
+.btn {
+  background: linear-gradient(0deg, rgb(113 165 247 / 0%) 0%, #e8eaf6 100%);
+  width: 200px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.1rem;
+  border: none;
+}
+
+.btn:hover {
+  box-shadow: inset -4px -4px 6px 0 rgba(246, 246, 246, 0.2),
+    inset 2px 2px 4px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.btn .btnInfo {
+  width: 350px;
+}
