@@ -1,9 +1,9 @@
-import KisaCart from "./pages/KisaCart";
+import MainPage from "./pages/MainPage";
 
 const App = () => {
   return (
     <div className="wrapper">
-      <KisaCart />
+      <MainPage />
     </div>
   );
 };
