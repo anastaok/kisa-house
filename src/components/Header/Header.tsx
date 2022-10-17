@@ -9,32 +9,38 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <div className="logo-img">
-          <FaCat className="icon-cat" />
+        <div className="logoImg">
+          <FaCat className="iconCat" />
         </div>
-        <Link to="/">
-          <div className="logo-name">
+        <Link className="link" to="/">
+          <div className="logoName">
             <div className="kisa">Киса</div>
             <div className="house">House</div>
           </div>
         </Link>
       </div>
-      <div className="container-menu">
-        <ul className="nav-menu">
-          <li>
-            <Link to="/">Выбрать друга</Link>
+      <div className="containerMenu">
+        <ul className="navMenu">
+          <li className="category">
+            <Link className="categoryLink" to="/catalog">
+              Выбрать друга
+            </Link>
           </li>
-          <li>
-            <Link to="/help">Помощь кисам</Link>
+          <li className="category">
+            <Link className="categoryLink" to="/help">
+              Помощь кисам
+            </Link>
           </li>
-          <li>
-            <Link to="/">Контакты</Link>
+          <li className="category">
+            <Link className="categoryLink" to="/">
+              Контакты
+            </Link>
           </li>
         </ul>
-        <Link to="/cart">
-          <div className="cart">
+        <Link className="link" to="/cart">
+          <div className="cartWrapper">
             Корзинка
-            <GiBasket className="icon-bsk" />
+            <GiBasket className="iconCart" />
           </div>
         </Link>
       </div>

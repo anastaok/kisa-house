@@ -1,17 +1,13 @@
 import "./Button.scss";
 
 type TProps = {
-  text: string;
+  children: React.ReactElement | string;
   width: "sm" | "md" | "lg";
   variant?: string;
 };
 
-const Button: React.FC<TProps> = ({ text, width, variant = "default" }) => {
-  return (
-    <button className={`${width} ${variant} `}>
-      <p>{text}</p>
-    </button>
-  );
+const Button: React.FC<TProps> = ({ children, width, variant = "default" }) => {
+  return <button className={`${width} ${variant} `}>{children}</button>;
 };
 
 export default Button;

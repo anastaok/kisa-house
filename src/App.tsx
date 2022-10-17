@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-
+import Catalog from "./components/Catalog";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HelpPage from "./pages/HelpPage";
@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/cart" element={<KisaCart />} />
+        <Route path="/catalog" element={<Catalog />} />
       </Routes>
       <Footer />
     </div>

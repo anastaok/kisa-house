@@ -1,0 +1,12 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+// .catalog {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+// }
