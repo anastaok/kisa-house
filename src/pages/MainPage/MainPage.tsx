@@ -33,7 +33,7 @@ const MainPage = () => {
     <div>
       <Header />
       <Video />
-      <div className="main-page">
+      <div className="mainPage">
         {kisas.map((kisa) => (
           <Kisa key={kisa.id} kisa={kisa} />
         ))}

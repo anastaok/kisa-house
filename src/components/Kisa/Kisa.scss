@@ -1,17 +1,17 @@
 .kisaContainer {
-  width: 250px;
-  height: 350px;
+  width: 15.625rem;
+  height: 21.875rem;
   background-color: #71a5f7;
-  margin: 15px;
-  padding: 15px;
+  margin: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   .photoContainer {
-    width: 250px;
-    height: 260px;
+    width: 15.625rem;
+    height: 16.25rem;
 
     .photoKisa {
       width: 100%;

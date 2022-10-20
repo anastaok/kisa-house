@@ -11,10 +11,10 @@ const Kisa: React.FC<TProps> = ({ kisa }) => {
     <div className="kisaContainer">
       <div className="photoContainer">
         <a href="/">
-          <img src={kisa.imageUrl} alt="kisa-1" className="photo" />
+          <img src={kisa.imageUrl} alt="kisa-1" className="photoKisa" />
         </a>
       </div>
-      <div className="info">
+      <div className="infoKisa">
         {kisa.name},&nbsp;{kisa.age}
       </div>
       <Button width="md">
