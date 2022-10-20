@@ -1,68 +1,48 @@
-.info-kisa {
-  padding: 45px;
+.infoKisa {
+  padding: 2.8rem;
 
-  .info-top {
+  .infoTop {
     display: flex;
     justify-content: space-evenly;
 
-    .info-photo {
+    .infoPhotoContainer {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: #71a5f7;
-      width: 550px;
-      height: 550px;
+      width: 34.4rem;
+      height: 34.4rem;
 
-      .photo {
-        width: 500px;
-        height: 450px;
-        margin-bottom: 20px;
+      .infoPhoto {
+        width: 31.25rem;
+        height: 28.2rem;
+        margin-bottom: 1.25rem;
       }
     }
 
-    .btn {
-      background: linear-gradient(0deg, rgb(113 165 247 / 0%) 0%, #e8eaf6 100%);
-      width: 350px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-    }
-
-    .btn:hover {
-      box-shadow: inset -4px -4px 6px 0 rgba(246, 246, 246, 0.2),
-        inset 2px 2px 4px 0 rgba(0, 0, 0, 0.4);
-      cursor: pointer;
-    }
-
-    .info-main {
+    .infoMain {
       font-size: 1.3rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-
-      h2 {
-        padding: 15px;
-      }
+      justify-content: space-evenly;
     }
   }
 }
 
-.info-bottom {
+.infoBottom {
   display: flex;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   font-size: 1.3rem;
 
-  .info-bottom-wrapper {
+  .infoBottomWrapper {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 1.25rem;
     text-align: center;
   }
 }
 
-span {
+.rubikText {
   font-family: "Rubik Bubbles";
 }

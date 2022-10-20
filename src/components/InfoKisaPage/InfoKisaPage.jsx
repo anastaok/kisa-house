@@ -1,25 +1,26 @@
 import "./InfoKisaPage.scss";
 import cat1 from "../../content/img/1.jpg";
+import Button from "../Button";
 
 const InfoKisaPage = () => {
   return (
-    <div className="info-kisa">
-      <div className="info-top">
-        <div className="info-photo">
-          <div className="photo">
-            <img src={cat1} alt="kisa-1" className="photo" />
-          </div>
-          <div className="btn">Забрать кису</div>
+    <div className="infoKisa">
+      <div className="infoTop">
+        <div className="infoPhotoContainer">
+          <img src={cat1} alt="kisa-1" className="infoPhoto" />
+          <Button width="lg">
+            <p>Забрать кису</p>
+          </Button>
         </div>
-        <div className="info-main">
+        <div className="infoMain">
           <h2>
-            Имя: <span>Мурзик</span>
+            Имя: <span className="rubikText">Мурзик</span>
           </h2>
           <h2>
-            Пол: <span>мальчик</span>
+            Пол: <span className="rubikText">мальчик</span>
           </h2>
           <h2>
-            Возраст: <span>3 года</span>
+            Возраст: <span className="rubikText">3 года</span>
           </h2>
           <h2>
             Порода: <span>инфо</span>
@@ -27,9 +28,9 @@ const InfoKisaPage = () => {
         </div>
       </div>
 
-      <div className="info-bottom">
-        <div className="info-bottom-wrapper">
-          <span>Характер:</span>
+      <div className="infoBottom">
+        <div className="infoBottomWrapper">
+          <span className="rubikText">Характер:</span>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             fuga, ipsam animi vero nulla quas reiciendis fugit debitis tempora
@@ -37,8 +38,8 @@ const InfoKisaPage = () => {
             Consequatur, sapiente?
           </p>
         </div>
-        <div className="info-bottom-wrapper">
-          <span>Любимая еда:</span>
+        <div className="infoBottomWrapper">
+          <span className="rubikText">Любимая еда:</span>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             fuga, ipsam animi vero nulla quas reiciendis fugit debitis tempora
@@ -46,8 +47,8 @@ const InfoKisaPage = () => {
             Consequatur, sapiente?
           </p>
         </div>
-        <div className="info-bottom-wrapper">
-          <span>Какого хозяина ищет:</span>
+        <div className="infoBottomWrapper">
+          <span className="rubikText">Какого хозяина ищет:</span>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             fuga, ipsam animi vero nulla quas reiciendis fugit debitis tempora
