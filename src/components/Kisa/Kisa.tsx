@@ -1,17 +1,21 @@
+import { TKisa } from "../../pages/MainPage/MainPage";
 import "./Kisa.scss";
-import cat1 from "../../content/img/1.jpg";
-import Button from "../Button";
 
-const Kisa = () => {
+type TProps = {
+  kisa: TKisa;
+};
+
+const Kisa: React.FC<TProps> = ({ kisa }) => {
   return (
     <div className="kisa-container">
       <div className="photo-container">
         <a href="/">
-          <img src={cat1} alt="kisa-1" className="photo" />
+          <img src={kisa.imageUrl} alt="kisa-1" className="photo" />
         </a>
       </div>
-      <div className="info">Мурзик, 3 года</div>
-      <Button text="Забрать Кису" />
+      <div className="info">
+        {kisa.name},&nbsp;{kisa.age}
+      </div>
     </div>
   );
 };

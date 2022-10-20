@@ -1,5 +1,5 @@
 {
-    "kissas": [
+    "kisas": [
         {
             "id": 0,
             "imageUrl": "https://media.istockphoto.com/photos/black-cat-kitten-looking-at-the-camera-isolated-on-white-picture-id514332662?k=20&m=514332662&s=612x612&w=0&h=8vXn5EFbAWdl_pHVqBoF_cWMOMZQiE8S8aomiUZlPXI=",
@@ -68,17 +68,6 @@
           },
         {
             "id": 6,
-            "imageUrl": "",
-            "name": "Мурзик",
-            "age": 3,
-            "gender": "мальчик",
-            "breed": "",
-            "character": "",
-            "food": "",
-            "owner": ""
-          },
-        {
-            "id": 7,
             "imageUrl": "https://4lapy.ru/upload/medialibrary/fb5/fb5484fcd52626b9652974bb05cf5a4e.jpg",
             "name": "Рыжик",
             "age": "3 года",
@@ -89,7 +78,7 @@
             "owner": "Они идеальные компаньоны для взрослых, так как с интересом присоединяются ко всем домашним делам. Особенность Рыжика в том, что он хочет всегда быть с хозяином"
           },
         {
-            "id": 8,
+            "id": 7,
             "imageUrl": "https://media.istockphoto.com/photos/kitten-on-a-white-background-picture-id511458158?k=20&m=511458158&s=612x612&w=0&h=tnBzMX8kZzCf3191UjlBBT_4afrVOtfPfMItK9NeUKw=",
             "name": "Филя",
             "age": "4 месяца",
@@ -100,7 +89,7 @@
             "owner": "Подойдет как для большой семьи, так и для одного хозяна. Главное – уделить достаточно внимания в первые 2 месяца привыкания и взросления котика на новом месте"
           },
         {
-            "id": 9,
+            "id": 8,
             "imageUrl": "https://www.petdarling.com/wp-content/uploads/2018/12/raza-sagrado-de-birmania.jpg",
             "name": "Пуша",
             "age": "4 года",
