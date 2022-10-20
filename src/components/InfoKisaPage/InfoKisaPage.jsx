@@ -23,7 +23,7 @@ const InfoKisaPage = () => {
             Возраст: <span className="rubikText">3 года</span>
           </h2>
           <h2>
-            Инфо: <span className="rubikText">инфо</span>
+            Порода: <span>инфо</span>
           </h2>
         </div>
       </div>
