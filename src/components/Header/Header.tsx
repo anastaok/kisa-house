@@ -1,37 +1,48 @@
+import { NavLink } from "react-router-dom";
+
 import "./Header.scss";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
-import Button from "../Button";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <div className="logo-img">
-          <FaCat className="icon-cat" />
+        <div className="logoImg">
+          <FaCat className="iconCat" />
         </div>
-        <div className="logo-name">
-          <div className="kisa">Киса</div>
-          <div className="house">House</div>
-        </div>
+        <NavLink className="link" to="/">
+          <div className="logoName">
+            <div className="logoKisa">Киса</div>
+            <div className="logoHouse">House</div>
+          </div>
+        </NavLink>
       </div>
-      <div className="container-menu">
-        <ul className="nav-menu">
-          <li>
-            <a href="/">Выбрать друга</a>
+      <div className="containerMenu">
+        <ul className="navMenu">
+          <li className="category">
+            <NavLink className="categoryLink" to="/catalog">
+              Выбрать друга
+            </NavLink>
           </li>
-          <li>
-            <a href="/">Помощь кисам</a>
+          <li className="category">
+            <NavLink className="categoryLink" to="/help">
+              Помощь кисам
+            </NavLink>
           </li>
-          <li>
-            <a href="/">Контакты</a>
+          <li className="category">
+            <NavLink className="categoryLink" to="/">
+              Контакты
+            </NavLink>
           </li>
         </ul>
-        <div className="cart">
-          Корзинка
-          <GiBasket className="icon-bsk" />
-        </div>
+        <NavLink className="link" to="/cart">
+          <div className="cartWrapper">
+            Корзинка
+            <GiBasket className="iconCart" />
+          </div>
+        </NavLink>
       </div>
     </div>
   );

@@ -1,62 +1,62 @@
-.help-kisa {
-  padding: 20px;
+.helpKisa {
+  padding: 1.25rem;
   color: #333;
 
-  .help-top {
-    margin-bottom: 50px;
+  .helpTop {
+    margin-bottom: 3.125rem;
     text-align: center;
   }
 
-  .text {
-    padding: 0 100px;
-    margin-bottom: 40px;
+  .helpText {
+    padding: 0 6.25rem;
+    margin-bottom: 2.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 1.2rem;
   }
 
-  .help-options {
+  .helpCategoryWrapper {
     display: flex;
     justify-content: space-evenly;
 
-    .option {
+    .helpCategory {
       border: rgba(51, 51, 51, 0.3) 2px solid;
       border-radius: 10%;
-      padding: 15px;
+      padding: 1rem;
       transition: all ease-in-out 0.3s;
       a {
         text-decoration: none;
         color: #333;
 
-        img {
-          width: 300px;
-          height: 300px;
+        .photoCategory {
+          width: 18.5rem;
+          height: 18.5rem;
         }
       }
     }
 
-    .option:hover {
+    .helpCategory:hover {
       transform: scale(1.1);
       border: 2px solid #71a5f7;
     }
   }
 
-  .help-bottom {
+  .helpBottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .map-counter {
-      width: 700px;
-      height: 300px;
+    .mapCounter {
+      width: 43.75rem;
+      height: 18.75rem;
       border: rgba(51, 51, 51, 0.3) 2px solid;
-      border-radius: 2%;
-      padding: 15px;
+      border-radius: 1rem;
+      padding: 1rem;
       transition: all ease-in-out 0.3s;
     }
 
-    .map-counter:hover {
+    .mapCounter:hover {
       border: 2px solid #71a5f7;
     }
   }

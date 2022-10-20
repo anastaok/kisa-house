@@ -1,54 +1,54 @@
 .footer {
   width: 100%;
-  height: 150px;
+  height: 9.3rem;
   padding: 1rem 0;
   background-color: #71a5f7;
 
-  .ftr-container {
+  .ftrContainer {
     margin: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 80px;
+    grid-gap: 5rem;
 
-    .ftr-left {
+    .ftrLeft {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 15px 0;
+      margin: 0 1rem 0;
 
-      h3 {
+      .ftrTitle {
         margin: 1rem;
         color: #333;
       }
 
-      p {
+      .ftrContent {
         margin-bottom: 0.6rem;
       }
     }
 
-    .ftr-right {
+    .ftrRight {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: flex-start;
 
-      a {
+      .ftrLink {
         display: flex;
         align-items: center;
         text-decoration: none;
         color: #333;
       }
 
-      .icon {
-        margin-right: 3px;
-        font-size: 20px;
+      .ftrIcon {
+        margin-right: 0, 25rem;
+        font-size: 1.25rem;
       }
 
-      a:hover {
+      .ftrLink:hover {
         color: rgb(255, 255, 255);
-        transition: 0.3s ease;
+        transition: 0.2s ease;
 
-        .icon {
+        .ftrIcon {
           color: red;
         }
       }

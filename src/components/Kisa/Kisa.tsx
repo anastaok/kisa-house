@@ -4,14 +4,16 @@ import Button from "../Button";
 
 const Kisa = () => {
   return (
-    <div className="kisa-container">
-      <div className="photo-container">
+    <div className="kisaContainer">
+      <div className="photoContainer">
         <a href="/">
-          <img src={cat1} alt="kisa-1" className="photo" />
+          <img src={cat1} alt="kisa-1" className="photoKisa" />
         </a>
       </div>
-      <div className="info">Мурзик, 3 года</div>
-      <Button text="Забрать Кису" />
+      <div className="infoKisa">Мурзик, 3 года</div>
+      <Button width="md">
+        <p>Забрать кису</p>
+      </Button>
     </div>
   );
 };
