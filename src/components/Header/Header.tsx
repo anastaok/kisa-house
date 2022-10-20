@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Header.scss";
 
@@ -12,37 +12,37 @@ const Header = () => {
         <div className="logoImg">
           <FaCat className="iconCat" />
         </div>
-        <Link className="link" to="/">
+        <NavLink className="link" to="/">
           <div className="logoName">
-            <div className="kisa">Киса</div>
-            <div className="house">House</div>
+            <div className="logoKisa">Киса</div>
+            <div className="logoHouse">House</div>
           </div>
-        </Link>
+        </NavLink>
       </div>
       <div className="containerMenu">
         <ul className="navMenu">
           <li className="category">
-            <Link className="categoryLink" to="/catalog">
+            <NavLink className="categoryLink" to="/catalog">
               Выбрать друга
-            </Link>
+            </NavLink>
           </li>
           <li className="category">
-            <Link className="categoryLink" to="/help">
+            <NavLink className="categoryLink" to="/help">
               Помощь кисам
-            </Link>
+            </NavLink>
           </li>
           <li className="category">
-            <Link className="categoryLink" to="/">
+            <NavLink className="categoryLink" to="/">
               Контакты
-            </Link>
+            </NavLink>
           </li>
         </ul>
-        <Link className="link" to="/cart">
+        <NavLink className="link" to="/cart">
           <div className="cartWrapper">
             Корзинка
             <GiBasket className="iconCart" />
           </div>
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
