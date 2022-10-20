@@ -22,7 +22,7 @@ const InfoKisaPage = () => {
             Возраст: <span>3 года</span>
           </h2>
           <h2>
-            Инфо: <span>инфо</span>
+            Порода: <span>инфо</span>
           </h2>
         </div>
       </div>

@@ -2,7 +2,6 @@ import "./Header.scss";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
-import Button from "../Button";
 
 const Header = () => {
   return (
