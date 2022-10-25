@@ -13,9 +13,12 @@ const InfoKisaPage: React.FC<TProps> = ({ kisas }) => {
 
   const [filteredKisa, setFilteredKisa] = useState<TKisa | null>(null);
   useEffect(() => {
+    window.scrollTo(0, 0);
     const filter = kisas.filter((kisa) => kisa.id === Number(id))[0];
+    console.log(id, kisas);
+
     setFilteredKisa(filter);
-  }, []);
+  }, [kisas]);
 
   return (
     <div className="infoKisa">

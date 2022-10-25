@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 
 import "./Header.scss";
 
@@ -32,9 +33,9 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="category">
-            <NavLink className="categoryLink" to="/">
+            <Link className="categoryLink" to="footer" smooth={true}>
               Контакты
-            </NavLink>
+            </Link>
           </li>
         </ul>
         <NavLink className="link" to="/cart">
