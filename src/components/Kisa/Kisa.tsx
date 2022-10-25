@@ -12,9 +12,7 @@ const Kisa: React.FC<TProps> = ({ kisa }) => {
     <div className="kisaContainer">
       <div className="photoContainer">
         <NavLink to={`/kisa-info/${kisa.id}`}>
-          {/* <div onClick={}> */}
           <img src={kisa.imageUrl} alt="kisa-1" className="photoKisa" />
-          {/* </div> */}
         </NavLink>
       </div>
       <div className="infoTitleKisa">

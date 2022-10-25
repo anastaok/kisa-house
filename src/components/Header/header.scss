@@ -10,6 +10,7 @@
 
   .containerMenu {
     display: flex;
+    align-items: center;
 
     .navMenu {
       display: flex;
@@ -20,7 +21,7 @@
 
       .category {
         list-style: none;
-        padding-right: 6.25rem;
+        margin: 0 3.125rem 0;
         transition: all 0.3s ease-in-out;
       }
 
@@ -30,7 +31,7 @@
       }
 
       .category:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
 
       .categoryLink:hover {
@@ -77,10 +78,10 @@
   }
 
   .logoName:hover {
-    .kisa {
-      color: #fc74f9;
+    .logoKisa {
+      color: #fc74e8;
     }
-    .house {
+    .logoHouse {
       color: #b5e1ff;
     }
   }
@@ -91,6 +92,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     color: #333;
+    padding-left: 3.125rem;
 
     .iconCart {
       font-size: 1.5rem;
@@ -102,7 +104,7 @@
 
   .cartWrapper:hover {
     color: rgb(255, 255, 255);
-    transform: scale(1.1);
+    transform: scale(1.05);
 
     .iconCart {
       color: red;

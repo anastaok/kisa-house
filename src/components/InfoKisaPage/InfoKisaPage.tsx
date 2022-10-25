@@ -41,7 +41,7 @@ const InfoKisaPage: React.FC<TProps> = ({ kisas }) => {
             Возраст: <span className="rubikText">{filteredKisa?.age}</span>
           </h2>
           <h2>
-            Порода: <span>{filteredKisa?.breed}</span>
+            Порода: <span className="rubikText">{filteredKisa?.breed}</span>
           </h2>
         </div>
       </div>
