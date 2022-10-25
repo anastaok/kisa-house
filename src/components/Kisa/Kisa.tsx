@@ -1,4 +1,5 @@
-import { TKisa } from "../../pages/MainPage/MainPage";
+import { NavLink } from "react-router-dom";
+import { TKisa } from "../../App";
 import Button from "../Button";
 import "./Kisa.scss";
 
@@ -10,11 +11,13 @@ const Kisa: React.FC<TProps> = ({ kisa }) => {
   return (
     <div className="kisaContainer">
       <div className="photoContainer">
-        <a href="/">
+        <NavLink to={`/kisa-info/${kisa.id}`}>
+          {/* <div onClick={}> */}
           <img src={kisa.imageUrl} alt="kisa-1" className="photoKisa" />
-        </a>
+          {/* </div> */}
+        </NavLink>
       </div>
-      <div className="infoKisa">
+      <div className="infoTitleKisa">
         {kisa.name},&nbsp;{kisa.age}
       </div>
       <Button width="md">

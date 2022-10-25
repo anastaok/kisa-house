@@ -1,11 +1,16 @@
 import Video from "../components/Video";
 import Catalog from "../components/Catalog";
+import { TKisa } from "../App";
 
-const MainPage = () => {
+type TProps = {
+  kisas: TKisa[];
+};
+
+const MainPage: React.FC<TProps> = ({ kisas }) => {
   return (
     <div>
       <Video />
-      <Catalog />
+      <Catalog kisas={kisas} />
     </div>
   );
 };
