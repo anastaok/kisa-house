@@ -1,30 +1,12 @@
 import "./Catalog.scss";
-import { useState, useEffect } from "react";
 import Kisa from "../../components/Kisa";
-import data from "../../db.json";
+import { TKisa } from "../../App";
 
-export type TKisa = {
-  id: number;
-  imageUrl: string;
-  name: string;
-  age: string;
-  gender: string;
-  breed: string;
-  character: string;
-  food: string;
-  owner: string;
+type TProps = {
+  kisas: TKisa[];
 };
 
-const Catalog = () => {
-  const [kisas, setKisas] = useState<TKisa[]>([]);
-
-  useEffect(() => {
-    // fake request
-    setTimeout(() => {
-      setKisas(data.kisas);
-    }, 500);
-  }, []);
-
+const Catalog: React.FC<TProps> = ({ kisas }) => {
   return (
     <div className="catalog">
       {kisas.map((kisa) => (
