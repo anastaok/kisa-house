@@ -5,9 +5,10 @@ import "./Kisa.scss";
 
 type TProps = {
   kisa: TKisa;
+  setCartKisas: React.Dispatch<React.SetStateAction<TKisa[]>>;
 };
 
-const Kisa: React.FC<TProps> = ({ kisa }) => {
+const Kisa: React.FC<TProps> = ({ kisa, setCartKisas }) => {
   return (
     <div className="kisaContainer">
       <div className="photoContainer">
@@ -18,7 +19,10 @@ const Kisa: React.FC<TProps> = ({ kisa }) => {
       <div className="infoTitleKisa">
         {kisa.name},&nbsp;{kisa.age}
       </div>
-      <Button width="md">
+      <Button
+        width="md"
+        onClick={() => setCartKisas((prev: TKisa[]) => [...prev, kisa])}
+      >
         <p>Забрать кису</p>
       </Button>
     </div>

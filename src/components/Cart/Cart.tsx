@@ -1,47 +1,46 @@
-import "./Cart.scss";
-import cat1 from "../../content/img/1.jpg";
+import React from "react";
 import { FaPaw } from "react-icons/fa";
-import Button from "../Button";
 
-const Cart = () => {
+import Button from "../Button";
+import { TKisa } from "../../App";
+import "./Cart.scss";
+
+type TProps = {
+  cartKisas: TKisa[];
+  setCartKisas: React.Dispatch<React.SetStateAction<TKisa[]>>;
+};
+
+const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
+  const removeKisa = (id: number) => {
+    setCartKisas(cartKisas.filter((kisa) => kisa.id !== id));
+  };
+
   return (
     <div className="cart">
       <div className="wrapperCart">
         <p className="titleCart">
           В Вашей корзинке уже сидят и ждут путешествия домой:
         </p>
-        <div className="kisaItem">
-          <img src={cat1} alt="kisa-1" className="photo" />
-          <p className="name">Мурзик, 3 года</p>
-          <Button width="sm">
-            <p>
-              Еще подумать
-              <FaPaw className="iconPaw" />
-            </p>
-          </Button>
-        </div>
-        <div className="kisaItem">
-          <img src={cat1} alt="kisa-1" className="photo" />
-          <p className="name">Мурзик, 3 года</p>
-          <Button width="sm">
-            <p>
-              Еще подумать
-              <FaPaw className="iconPaw" />
-            </p>
-          </Button>
-        </div>
-        <div className="kisaItem">
-          <img src={cat1} alt="kisa-1" className="photo" />
-          <p className="name">Мурзик, 3 года</p>
-          <Button width="sm">
-            <p>
-              Еще подумать
-              <FaPaw className="iconPaw" />
-            </p>
-          </Button>
-        </div>
+        {cartKisas.length ? (
+          cartKisas.map((kisa) => (
+            <React.Fragment key={kisa.id}>
+              <div className="kisaItem">
+                <img src={kisa.imageUrl} alt={kisa.name} className="photo" />
+                <p className="name">{`${kisa.name}, ${kisa.age}`}</p>
+                <Button width="sm" onClick={() => removeKisa(kisa.id)}>
+                  <p>
+                    Еще подумать
+                    <FaPaw className="iconPaw" />
+                  </p>
+                </Button>
+              </div>
+            </React.Fragment>
+          ))
+        ) : (
+          <p>{"Вы пока не осчатливили кис:("}</p>
+        )}
 
-        <p className="titleCart">Число счастливых кис: 1</p>
+        <p className="titleCart">Число счастливых кис: {cartKisas.length}</p>
       </div>
       <div className="containerForm">
         <form className="formCart">

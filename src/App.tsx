@@ -24,12 +24,8 @@ export type TKisa = {
 };
 
 const App = () => {
-  // 1. Перенсти запрос в App
-  // 2. Передать кис в MainPage and InfoKisaPage (тип с кисами надо перенести в апп тоже)
-  // 3. В инфокисапейдж доставать id из урла странички и через filter найти нужную кису
-  // 4. Взять из нее инфу и отрисовать
-
   const [kisas, setKisas] = useState<TKisa[]>([]);
+  const [cartKisas, setCartKisas] = useState<TKisa[]>([]);
 
   useEffect(() => {
     // fake request
@@ -42,10 +38,19 @@ const App = () => {
     <div className="wrapper">
       <Header />
       <Routes>
-        <Route path="/" element={<MainPage kisas={kisas} />} />
+        <Route
+          path="/"
+          element={<MainPage kisas={kisas} setCartKisas={setCartKisas} />}
+        />
         <Route path="/help" element={<HelpKisa />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/catalog" element={<Catalog kisas={kisas} />} />
+        <Route
+          path="/cart"
+          element={<Cart cartKisas={cartKisas} setCartKisas={setCartKisas} />}
+        />
+        <Route
+          path="/catalog"
+          element={<Catalog kisas={kisas} setCartKisas={setCartKisas} />}
+        />
         <Route path="/kisa-info/:id" element={<InfoKisaPage kisas={kisas} />} />
       </Routes>
       <Footer />
