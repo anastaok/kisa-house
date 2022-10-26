@@ -2,11 +2,16 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
 import "./Header.scss";
+import { TKisa } from "../../App";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
 
-const Header = () => {
+type TProps = {
+  cartKisas: TKisa[];
+};
+
+const Header: React.FC<TProps> = ({ cartKisas }) => {
   return (
     <div className="header">
       <div className="logo">
@@ -40,7 +45,7 @@ const Header = () => {
         </ul>
         <NavLink className="link" to="/cart">
           <div className="cartWrapper">
-            Корзинка
+            Корзинка: {cartKisas.length}
             <GiBasket className="iconCart" />
           </div>
         </NavLink>

@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <div className="wrapper">
-      <Header />
+      <Header cartKisas={cartKisas} />
       <Routes>
         <Route
           path="/"
