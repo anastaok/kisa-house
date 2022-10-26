@@ -37,34 +37,37 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
             </React.Fragment>
           ))
         ) : (
-          <p>{"Вы пока не осчатливили кис:("}</p>
+          <p className="titleCart">{"Вы пока не осчатливили кис:("}</p>
         )}
-
-        <p className="titleCart">Число счастливых кис: {cartKisas.length}</p>
+        {cartKisas.length ? (
+          <p className="titleCart">Число счастливых кис: {cartKisas.length}</p>
+        ) : null}
       </div>
-      <div className="containerForm">
-        <form className="formCart">
-          <strong>Оставьте Ваши контакты:</strong>
-          <label className="contentForm">ФИО</label>
-          <input className="formData" type="text"></input>
-          <label className="contentForm">Телефон</label>
-          <input className="formData" type="text"></input>
-          <label className="contentForm">E-mail</label>
-          <input className="formData" type="text"></input>
-          <label className="contentForm">Ваши вопросы или комментарии:</label>
-          <textarea
-            className="formData"
-            placeholder="Напишите сообщение здесь..."
-          ></textarea>
-          <p className="titleCart">
-            После отправки данных – с Вами свяжется наш помощник и объяснит
-            дальнейшие действия
-            <Button width="lg">
-              <p>Отправить</p>
-            </Button>
-          </p>
-        </form>
-      </div>
+      {cartKisas.length ? (
+        <div className="containerForm">
+          <form className="formCart">
+            <strong>Оставьте Ваши контакты:</strong>
+            <label className="contentForm">ФИО</label>
+            <input className="formData" type="text"></input>
+            <label className="contentForm">Телефон</label>
+            <input className="formData" type="text"></input>
+            <label className="contentForm">E-mail</label>
+            <input className="formData" type="text"></input>
+            <label className="contentForm">Ваши вопросы или комментарии:</label>
+            <textarea
+              className="formData"
+              placeholder="Напишите сообщение здесь..."
+            ></textarea>
+            <p className="titleCart">
+              После отправки данных – с Вами свяжется наш помощник и объяснит
+              дальнейшие действия
+              <Button width="lg">
+                <p>Отправить</p>
+              </Button>
+            </p>
+          </form>
+        </div>
+      ) : null}
     </div>
   );
 };
