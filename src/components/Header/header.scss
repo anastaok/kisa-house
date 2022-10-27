@@ -7,10 +7,15 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
+  z-index: 10;
+  top: 0;
+  left: 0;
 
   .containerMenu {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    height: 100%;
 
     .navMenu {
       display: flex;
@@ -38,6 +43,20 @@
       .categoryLink:hover {
         color: rgb(255, 255, 255);
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+    .hamburgerIcon {
+      size: 20;
+      color: #333;
+    }
+
+    @media screen and (max-width: 1150px) {
+      display: flex;
     }
   }
 
@@ -115,4 +134,30 @@
 
 .link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .navMenu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    top: 3.8rem;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.4s;
+    z-index: 2;
+    background-color: #71a5f7;
+    text-align: center;
+  }
+  .navMenu.active {
+    left: 0;
+  }
+
+  .category,
+  .cartWrapper {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
 }
