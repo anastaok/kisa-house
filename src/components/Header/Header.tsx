@@ -10,10 +10,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
   const [click, setClick] = useState(false);
-  const handleClick = () => {
-    setClick(!click);
-  };
+
+  const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
   return (
     <div className="header">
       <div className="logo">
@@ -44,12 +44,12 @@ const Header = () => {
               Контакты
             </Link>
           </li>
-          <NavLink className="link" to="/cart">
-            <li className="cartWrapper" onClick={closeMobileMenu}>
+          <li className="category cartWrapper" onClick={closeMobileMenu}>
+            <NavLink className="categoryLink" to="/cart">
               Корзинка
               <GiBasket className="iconCart" />
-            </li>
-          </NavLink>
+            </NavLink>
+          </li>
         </ul>
 
         <div className="hamburger" onClick={handleClick}>
