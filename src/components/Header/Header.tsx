@@ -20,7 +20,7 @@ const Header = () => {
         <div className="logoImg">
           <FaCat className="iconCat" />
         </div>
-        <NavLink className="link" to="/">
+        <NavLink className="link" to="/" onClick={closeMobileMenu}>
           <div className="logoName">
             <div className="logoKisa">Киса</div>
             <div className="logoHouse">House</div>
@@ -29,27 +29,36 @@ const Header = () => {
       </div>
       <div className="containerMenu">
         <ul className={click ? "navMenu active" : "navMenu"}>
-          <li className="category" onClick={closeMobileMenu}>
-            <NavLink className="categoryLink" to="/catalog">
-              Выбрать друга
-            </NavLink>
-          </li>
-          <li className="category" onClick={closeMobileMenu}>
-            <NavLink className="categoryLink" to="/help">
+          <NavLink
+            className="categoryLink"
+            to="/catalog"
+            onClick={closeMobileMenu}
+          >
+            <li className="category">Выбрать друга</li>
+          </NavLink>
+          <NavLink className="categoryLink" to="/help">
+            <li className="category" onClick={closeMobileMenu}>
               Помощь кисам
-            </NavLink>
-          </li>
-          <li className="category" onClick={closeMobileMenu}>
-            <Link className="categoryLink" to="footer" smooth={true}>
+            </li>
+          </NavLink>
+          <Link
+            className="categoryLink"
+            to="footer"
+            smooth={true}
+            onClick={closeMobileMenu}
+          >
+            <li className="category" onClick={closeMobileMenu}>
               Контакты
-            </Link>
-          </li>
-          <li className="category cartWrapper" onClick={closeMobileMenu}>
-            <NavLink className="categoryLink" to="/cart">
+            </li>
+          </Link>
+          <NavLink className="categoryLink" to="/cart">
+            <li className="category" onClick={closeMobileMenu}>
               Корзинка
-              <GiBasket className="iconCart" />
-            </NavLink>
-          </li>
+              <div className="cartImg">
+                <GiBasket className="iconCart" />
+              </div>
+            </li>
+          </NavLink>
         </ul>
 
         <div className="hamburger" onClick={handleClick}>

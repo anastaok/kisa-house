@@ -1,8 +1,7 @@
 .header {
   height: 3.8rem;
-  padding: 0 1rem;
   background-color: #71a5f7;
-  position: sticky;
+  position: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +9,7 @@
   z-index: 10;
   top: 0;
   left: 0;
+  box-sizing: border-box;
 
   .containerMenu {
     display: flex;
@@ -23,40 +23,45 @@
       padding: 0;
       margin: 0;
       color: #333;
+      height: 100%;
 
-      .category {
-        list-style: none;
-        margin: 0 3.125rem 0;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
+      .categoryLink {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        transition: all 0.5s ease-in-out;
+        height: 100%;
 
-        .categoryLink {
+        .category {
+          list-style: none;
+          margin: 0 3.125rem 0;
+          cursor: pointer;
           display: flex;
-          text-decoration: none;
-          color: #333;
+          align-items: center;
         }
-      }
 
-      .category:hover {
-        transform: scale(1.05);
-
-        .categoryLink:hover {
-          color: rgb(255, 255, 255);
+        .cartImg {
+          font-size: 1.3rem;
 
           .iconCart {
-            color: red;
+            color: #333;
+            margin-left: 0.2rem;
           }
         }
       }
 
-      .cartWrapper {
-        margin-right: 0;
+      .categoryLink:hover {
+        background-color: rgba(51, 51, 51, 0.1);
+        color: rgb(255, 255, 255);
+        transition: all 0.3s ease-in-out;
+
+        .category {
+          transform: scale(1.05);
+        }
 
         .iconCart {
-          font-size: 1.3rem;
-          color: #333;
-          margin-left: 0.2rem;
-          transition: all 0.3s ease-in-out;
+          color: red;
         }
       }
     }
@@ -75,23 +80,21 @@
         background-color: #71a5f7;
         text-align: center;
 
-        .category {
+        .categoryLink {
           display: flex;
           align-content: center;
           justify-content: center;
           align-items: center;
           padding: 1.5rem 0;
           width: 100%;
+          height: 4rem;
           border-bottom: 1px solid #eee;
         }
 
-        .cartWrapper {
-          margin-right: 3.125rem;
-        }
-
-        .category:hover {
+        .categoryLink:hover {
           transform: none;
-          .categoryLink:hover {
+
+          .category:hover {
             color: rgb(255, 255, 255);
 
             .iconCart {
@@ -110,6 +113,7 @@
   .hamburger {
     display: none;
     cursor: pointer;
+    padding-right: 1rem;
 
     .hamburgerIcon {
       size: 20;
@@ -126,6 +130,7 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;
+    padding-left: 1rem;
 
     .logoImg {
       .iconCat {
