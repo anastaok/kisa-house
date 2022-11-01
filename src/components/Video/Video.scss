@@ -29,3 +29,16 @@
     margin-bottom: 45px;
   }
 }
+
+@media screen and (max-width: 1151px) {
+  .videoText {
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 85vh;
+    padding: 3rem 1.25rem;
+
+    .leftTxt {
+      margin: 0;
+    }
+  }
+}
