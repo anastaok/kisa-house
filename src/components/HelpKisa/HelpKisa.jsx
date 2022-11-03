@@ -52,8 +52,6 @@ const HelpKisa = () => {
         <div className="mapCounter">
           <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A24880c51b43c7db577f957f326117d944dea2594b1e191e49be94fbe35c98f86&amp;source=constructor"
-            width="700"
-            height="300"
             frameborder="0"
           ></iframe>
         </div>
