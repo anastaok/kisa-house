@@ -1,19 +1,26 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import { useState } from "react";
 
 import "./Header.scss";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
     <div className="header">
       <div className="logo">
         <div className="logoImg">
           <FaCat className="iconCat" />
         </div>
-        <NavLink className="link" to="/">
+        <NavLink className="link" to="/" onClick={closeMobileMenu}>
           <div className="logoName">
             <div className="logoKisa">Киса</div>
             <div className="logoHouse">House</div>
@@ -21,29 +28,46 @@ const Header = () => {
         </NavLink>
       </div>
       <div className="containerMenu">
-        <ul className="navMenu">
-          <li className="category">
-            <NavLink className="categoryLink" to="/catalog">
-              Выбрать друга
-            </NavLink>
-          </li>
-          <li className="category">
-            <NavLink className="categoryLink" to="/help">
+        <ul className={click ? "navMenu active" : "navMenu"}>
+          <NavLink
+            className="categoryLink"
+            to="/catalog"
+            onClick={closeMobileMenu}
+          >
+            <li className="category">Выбрать друга</li>
+          </NavLink>
+          <NavLink className="categoryLink" to="/help">
+            <li className="category" onClick={closeMobileMenu}>
               Помощь кисам
-            </NavLink>
-          </li>
-          <li className="category">
-            <Link className="categoryLink" to="footer" smooth={true}>
+            </li>
+          </NavLink>
+          <Link
+            className="categoryLink"
+            to="footer"
+            smooth={true}
+            onClick={closeMobileMenu}
+          >
+            <li className="category" onClick={closeMobileMenu}>
               Контакты
-            </Link>
-          </li>
+            </li>
+          </Link>
+          <NavLink className="categoryLink" to="/cart">
+            <li className="category" onClick={closeMobileMenu}>
+              Корзинка
+              <div className="cartImg">
+                <GiBasket className="iconCart" />
+              </div>
+            </li>
+          </NavLink>
         </ul>
-        <NavLink className="link" to="/cart">
-          <div className="cartWrapper">
-            Корзинка
-            <GiBasket className="iconCart" />
-          </div>
-        </NavLink>
+
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (
+            <FaTimes className="hamburgerIcon" />
+          ) : (
+            <FaBars className="hamburgerIcon" />
+          )}
+        </div>
       </div>
     </div>
   );
