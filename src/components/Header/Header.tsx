@@ -3,12 +3,17 @@ import { Link } from "react-scroll";
 import { useState } from "react";
 
 import "./Header.scss";
+import { TKisa } from "../../App";
 
 import { FaCat } from "react-icons/fa";
 import { GiBasket } from "react-icons/gi";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Header = () => {
+type TProps = {
+  cartKisas: TKisa[];
+};
+
+const Header: React.FC<TProps> = ({ cartKisas }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -53,7 +58,7 @@ const Header = () => {
           </Link>
           <NavLink className="categoryLink" to="/cart">
             <li className="category" onClick={closeMobileMenu}>
-              Корзинка
+              Корзинка: {cartKisas.length}
               <div className="cartImg">
                 <GiBasket className="iconCart" />
               </div>

@@ -1,8 +1,11 @@
 .cart {
   padding: 3rem 6rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   align-items: center;
+  flex-direction: column;
+  min-height: 49vh;
 
   .titleCart {
     font-size: 1.3rem;

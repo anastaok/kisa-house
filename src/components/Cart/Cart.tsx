@@ -18,9 +18,11 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
   return (
     <div className="cart">
       <div className="wrapperCart">
-        <p className="titleCart">
-          В Вашей корзинке уже сидят и ждут путешествия домой:
-        </p>
+        {cartKisas.length ? (
+          <p className="titleCart">
+            В Вашей корзинке уже сидят и ждут путешествия домой:
+          </p>
+        ) : null}
         {cartKisas.length ? (
           cartKisas.map((kisa) => (
             <React.Fragment key={kisa.id}>
@@ -37,7 +39,7 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
             </React.Fragment>
           ))
         ) : (
-          <p className="titleCart">{"Вы пока не осчатливили кис:("}</p>
+          <p className="titleCart">{"Вы пока не осчатливили кис :("}</p>
         )}
         {cartKisas.length ? (
           <p className="titleCart">Число счастливых кис: {cartKisas.length}</p>
