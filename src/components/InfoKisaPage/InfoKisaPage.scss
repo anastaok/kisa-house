@@ -4,6 +4,7 @@
   .infoTop {
     display: flex;
     justify-content: space-evenly;
+    gap: 1.5rem;
 
     .infoPhotoContainer {
       display: flex;
@@ -13,6 +14,7 @@
       background-color: #71a5f7;
       width: 32.5rem;
       height: 36rem;
+      border-radius: 2%;
 
       .infoPhoto {
         width: 28.5rem;
@@ -32,8 +34,10 @@
 }
 
 .infoBottom {
-  display: flex;
   margin-top: 1.875rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
   font-size: 1.3rem;
 
   .infoBottomWrapper {
@@ -47,4 +51,38 @@
 .rubikText {
   font-family: "Rubik Bubbles";
   color: #333;
+}
+
+@media screen and (max-width: 1000px) {
+  .infoKisa {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 1rem;
+
+    .infoTop {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      .infoPhotoContainer {
+        width: 23rem;
+        height: 25rem;
+
+        .infoPhoto {
+          width: 18rem;
+          height: 18rem;
+        }
+      }
+
+      .infoMain {
+        display: block;
+        width: auto;
+      }
+    }
+
+    .infoBottom {
+      display: block;
+    }
+  }
 }
