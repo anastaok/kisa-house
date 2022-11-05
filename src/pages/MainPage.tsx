@@ -5,13 +5,18 @@ import { TKisa } from "../App";
 type TProps = {
   kisas: TKisa[];
   setCartKisas: React.Dispatch<React.SetStateAction<TKisa[]>>;
+  cartKisas: TKisa[];
 };
 
-const MainPage: React.FC<TProps> = ({ kisas, setCartKisas }) => {
+const MainPage: React.FC<TProps> = ({ kisas, setCartKisas, cartKisas }) => {
   return (
     <div>
       <Video />
-      <Catalog kisas={kisas} setCartKisas={setCartKisas} />
+      <Catalog
+        kisas={kisas}
+        setCartKisas={setCartKisas}
+        cartKisas={cartKisas}
+      />
     </div>
   );
 };

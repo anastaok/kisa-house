@@ -40,6 +40,11 @@
           cursor: pointer;
           display: flex;
           align-items: center;
+
+          .cartNumber {
+            width: 1.2rem;
+            text-align: center;
+          }
         }
 
         .cartImg {

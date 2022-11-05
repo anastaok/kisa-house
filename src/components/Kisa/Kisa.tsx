@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+
 import { TKisa } from "../../App";
 import Button from "../Button";
 import "./Kisa.scss";
@@ -7,15 +7,16 @@ import "./Kisa.scss";
 type TProps = {
   kisa: TKisa;
   setCartKisas: React.Dispatch<React.SetStateAction<TKisa[]>>;
+  cartKisas: TKisa[];
 };
 
-const Kisa: React.FC<TProps> = ({ kisa, setCartKisas }) => {
-  const [disabled, setDisabled] = useState(false);
-
-  const func = () => {
+const Kisa: React.FC<TProps> = ({ kisa, setCartKisas, cartKisas }) => {
+  const takeKisa = () => {
     setCartKisas((prev: TKisa[]) => [...prev, kisa]);
-    setDisabled(true);
-    console.log(disabled);
+  };
+
+  const isDisabled = () => {
+    return Boolean(cartKisas.find((item) => item.id === kisa.id));
   };
 
   return (
@@ -28,7 +29,7 @@ const Kisa: React.FC<TProps> = ({ kisa, setCartKisas }) => {
       <div className="infoTitleKisa">
         {kisa.name},&nbsp;{kisa.age}
       </div>
-      <Button width="md" onClick={func} disabled={disabled}>
+      <Button width="md" onClick={takeKisa} disabled={isDisabled()}>
         <p>Забрать кису</p>
       </Button>
     </div>

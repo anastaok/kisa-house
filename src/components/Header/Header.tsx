@@ -17,8 +17,10 @@ const Header: React.FC<TProps> = ({ cartKisas }) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
+  const closeMobileMenu = () => {
+    setClick(false);
+    window.scrollTo(0, 0);
+  };
   return (
     <div className="header">
       <div className="logo">
@@ -58,7 +60,7 @@ const Header: React.FC<TProps> = ({ cartKisas }) => {
           </Link>
           <NavLink className="categoryLink" to="/cart">
             <li className="category" onClick={closeMobileMenu}>
-              Корзинка: {cartKisas.length}
+              Корзинка: <div className="cartNumber">{cartKisas.length}</div>
               <div className="cartImg">
                 <GiBasket className="iconCart" />
               </div>

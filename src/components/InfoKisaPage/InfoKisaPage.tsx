@@ -1,24 +1,35 @@
-import "./InfoKisaPage.scss";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 import Button from "../Button";
 import { TKisa } from "../../App";
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import "./InfoKisaPage.scss";
 
 type TProps = {
   kisas: TKisa[];
+  setCartKisas: React.Dispatch<React.SetStateAction<TKisa[]>>;
+  cartKisas: TKisa[];
 };
 
-const InfoKisaPage: React.FC<TProps> = ({ kisas }) => {
+const InfoKisaPage: React.FC<TProps> = ({ kisas, setCartKisas, cartKisas }) => {
   const { id } = useParams();
+  // const isMobile = useMediaQuery() === 'mobile'
 
   const [filteredKisa, setFilteredKisa] = useState<TKisa | null>(null);
   useEffect(() => {
     window.scrollTo(0, 0);
     const filter = kisas.filter((kisa) => kisa.id === Number(id))[0];
-    console.log(id, kisas);
 
     setFilteredKisa(filter);
   }, [kisas]);
+
+  const takeKisa = () => {
+    filteredKisa && setCartKisas((prev: TKisa[]) => [...prev, filteredKisa]);
+  };
+
+  const isDisabled = () => {
+    return Boolean(cartKisas.find((item) => item.id === filteredKisa?.id));
+  };
 
   return (
     <div className="infoKisa">
@@ -29,7 +40,8 @@ const InfoKisaPage: React.FC<TProps> = ({ kisas }) => {
             alt="kisa-1"
             className="infoPhoto"
           />
-          <Button width="lg">
+          {/* <Button width={isMobile ? 'sm' : 'lg'} onClick={takeKisa} disabled={isDisabled()}> */}
+          <Button width="lg" onClick={takeKisa} disabled={isDisabled()}>
             <p>Забрать кису</p>
           </Button>
         </div>

@@ -40,7 +40,13 @@ const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<MainPage kisas={kisas} setCartKisas={setCartKisas} />}
+          element={
+            <MainPage
+              kisas={kisas}
+              setCartKisas={setCartKisas}
+              cartKisas={cartKisas}
+            />
+          }
         />
         <Route path="/help" element={<HelpKisa />} />
         <Route
@@ -49,9 +55,24 @@ const App = () => {
         />
         <Route
           path="/catalog"
-          element={<Catalog kisas={kisas} setCartKisas={setCartKisas} />}
+          element={
+            <Catalog
+              kisas={kisas}
+              setCartKisas={setCartKisas}
+              cartKisas={cartKisas}
+            />
+          }
         />
-        <Route path="/kisa-info/:id" element={<InfoKisaPage kisas={kisas} />} />
+        <Route
+          path="/kisa-info/:id"
+          element={
+            <InfoKisaPage
+              kisas={kisas}
+              cartKisas={cartKisas}
+              setCartKisas={setCartKisas}
+            />
+          }
+        />
       </Routes>
       <Footer />
     </div>
