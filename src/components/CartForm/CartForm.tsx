@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import Button from "../Button";
@@ -30,63 +30,52 @@ const CartForm = () => {
         console.log("SUBMIT", values);
       }}
     >
-      {(formik) => (
-        <div className="containerForm">
-          <form className="formCart" onSubmit={formik.handleSubmit}>
-            <strong>Оставьте Ваши контакты:</strong>
-            <label className="contentForm">ФИО</label>
-            <input
-              className="formData"
-              id="fullName"
-              type="text"
-              placeholder="Иванов Иван Иванович"
-              {...formik.getFieldProps("fullName")}
-            />
-            {formik.touched.fullName && formik.errors.fullName ? (
-              <div>{formik.errors.fullName}</div>
-            ) : null}
+      <div className="containerForm">
+        <Form className="formCart">
+          <strong>Оставьте Ваши контакты:</strong>
+          <label className="contentForm">ФИО</label>
+          <Field
+            className="formData"
+            name="fullName"
+            type="text"
+            placeholder="Иванов Иван Иванович"
+          />
+          <ErrorMessage name="fullName" />
 
-            <label className="contentForm">Телефон</label>
-            <input
-              className="formData"
-              id="telephone"
-              type="tel"
-              placeholder="89000000000"
-              {...formik.getFieldProps("telephone")}
-            />
-            {formik.touched.telephone && formik.errors.telephone ? (
-              <div>{formik.errors.telephone}</div>
-            ) : null}
+          <label className="contentForm">Телефон</label>
+          <Field
+            className="formData"
+            name="telephone"
+            type="tel"
+            placeholder="89000000000"
+          />
+          <ErrorMessage name="telephone" />
 
-            <label className="contentForm">E-mail</label>
-            <input
-              className="formData"
-              id="email"
-              type="email"
-              placeholder="ivanov@mail.ru"
-              {...formik.getFieldProps("email")}
-            />
-            {formik.touched.email && formik.errors.email ? (
-              <div>{formik.errors.email}</div>
-            ) : null}
+          <label className="contentForm">E-mail</label>
+          <Field
+            className="formData"
+            name="email"
+            type="email"
+            placeholder="ivanov@mail.ru"
+          />
+          <ErrorMessage name="email" />
 
-            <label className="contentForm">Ваши вопросы или комментарии:</label>
-            <input
-              className="formData"
-              id="text"
-              placeholder="Напишите сообщение здесь..."
-              {...formik.getFieldProps("text")}
-            />
-            <p className="titleCart">
-              После отправки данных – с Вами свяжется наш помощник и объяснит
-              дальнейшие действия
-              <Button width="lg" type="submit">
-                <p>Отправить</p>
-              </Button>
-            </p>
-          </form>
-        </div>
-      )}
+          <label className="contentForm">Ваши вопросы или комментарии:</label>
+          <Field
+            as="textarea"
+            name="text"
+            className="formData"
+            placeholder="Напишите сообщение здесь..."
+          />
+          <p className="titleCart">
+            После отправки данных – с Вами свяжется наш помощник и объяснит
+            дальнейшие действия
+            <Button width="lg" type="submit">
+              <p>Отправить</p>
+            </Button>
+          </p>
+        </Form>
+      </div>
     </Formik>
   );
 };
