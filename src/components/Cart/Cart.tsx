@@ -1,8 +1,9 @@
 import React from "react";
 import { FaPaw } from "react-icons/fa";
 
-import Button from "../Button";
 import { TKisa } from "../../App";
+import Button from "../Button";
+import CartForm from "../CartForm";
 import "./Cart.scss";
 
 type TProps = {
@@ -45,31 +46,8 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
           <p className="titleCart">Число счастливых кис: {cartKisas.length}</p>
         ) : null}
       </div>
-      {cartKisas.length ? (
-        <div className="containerForm">
-          <form className="formCart">
-            <strong>Оставьте Ваши контакты:</strong>
-            <label className="contentForm">ФИО</label>
-            <input className="formData" type="text"></input>
-            <label className="contentForm">Телефон</label>
-            <input className="formData" type="text"></input>
-            <label className="contentForm">E-mail</label>
-            <input className="formData" type="text"></input>
-            <label className="contentForm">Ваши вопросы или комментарии:</label>
-            <textarea
-              className="formData"
-              placeholder="Напишите сообщение здесь..."
-            ></textarea>
-            <p className="titleCart">
-              После отправки данных – с Вами свяжется наш помощник и объяснит
-              дальнейшие действия
-              <Button width="lg">
-                <p>Отправить</p>
-              </Button>
-            </p>
-          </form>
-        </div>
-      ) : null}
+
+      {cartKisas.length ? <CartForm /> : null}
     </div>
   );
 };
