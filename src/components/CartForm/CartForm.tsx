@@ -16,15 +16,15 @@ const CartForm = () => {
       }}
       validationSchema={Yup.object({
         fullName: Yup.string()
-          .min(3, "Не менее 3 символов")
-          .required("Обязательно к заполнению"),
+          .min(3, "*не менее 3 символов")
+          .required("*обязательно к заполнению"),
         telephone: Yup.string()
-          .min(11, "Укажите номер телефона с 8")
-          .max(11, "Укажите номер телефона с 8")
-          .required("Обязательно к заполнению"),
+          .min(11, "*укажите полный мобильный номер телефона с 8")
+          .max(11, "*написано больше 11 символов")
+          .required("*обязательно к заполнению (11 символов)"),
         email: Yup.string()
-          .email("Неверно указан e-mail")
-          .required("Обязательно к заполнению"),
+          .email("*неверно указан e-mail")
+          .required("*обязательно к заполнению"),
       })}
       onSubmit={(values) => {
         console.log("SUBMIT", values);
@@ -40,16 +40,24 @@ const CartForm = () => {
             type="text"
             placeholder="Иванов Иван Иванович"
           />
-          <ErrorMessage name="fullName" />
+          <ErrorMessage
+            name="fullName"
+            component="div"
+            className="errorMassage"
+          />
 
           <label className="contentForm">Телефон</label>
           <Field
             className="formData"
             name="telephone"
-            type="tel"
+            type="number"
             placeholder="89000000000"
           />
-          <ErrorMessage name="telephone" />
+          <ErrorMessage
+            name="telephone"
+            component="div"
+            className="errorMassage"
+          />
 
           <label className="contentForm">E-mail</label>
           <Field
@@ -58,7 +66,7 @@ const CartForm = () => {
             type="email"
             placeholder="ivanov@mail.ru"
           />
-          <ErrorMessage name="email" />
+          <ErrorMessage name="email" component="div" className="errorMassage" />
 
           <label className="contentForm">Ваши вопросы или комментарии:</label>
           <Field
