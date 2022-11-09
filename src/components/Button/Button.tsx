@@ -3,7 +3,7 @@ import "./Button.scss";
 type TProps = {
   children: React.ReactElement | string;
   width: "sm" | "md" | "lg";
-  variant?: string;
+  variant?: "colorBlue";
   onClick?: () => void;
   disabled?: boolean;
   type?: "submit";

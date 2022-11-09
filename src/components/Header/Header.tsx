@@ -19,7 +19,11 @@ const Header: React.FC<TProps> = ({ cartKisas }) => {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => {
     setClick(false);
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
   return (
     <div className="header">

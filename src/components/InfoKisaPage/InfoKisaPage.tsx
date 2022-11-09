@@ -17,7 +17,11 @@ const InfoKisaPage: React.FC<TProps> = ({ kisas, setCartKisas, cartKisas }) => {
 
   const [filteredKisa, setFilteredKisa] = useState<TKisa | null>(null);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     const filter = kisas.filter((kisa) => kisa.id === Number(id))[0];
 
     setFilteredKisa(filter);

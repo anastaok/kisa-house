@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPaw } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 import { TKisa } from "../../App";
 import Button from "../Button";
@@ -14,6 +15,16 @@ type TProps = {
 const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
   const removeKisa = (id: number) => {
     setCartKisas(cartKisas.filter((kisa) => kisa.id !== id));
+  };
+
+  const navigate = useNavigate();
+  const backToHome = () => {
+    navigate("/");
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -40,7 +51,13 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
             </React.Fragment>
           ))
         ) : (
-          <p className="titleCart">{"Вы пока не осчатливили кис :("}</p>
+          <>
+            {" "}
+            <p className="titleCart">{"Вы пока не осчатливили кис :("}</p>
+            <Button width="lg" variant="colorBlue" onClick={backToHome}>
+              {"Вернуться на главную"}
+            </Button>
+          </>
         )}
         {cartKisas.length ? (
           <p className="titleCart">Число счастливых кис: {cartKisas.length}</p>

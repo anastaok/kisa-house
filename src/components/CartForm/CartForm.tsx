@@ -90,7 +90,7 @@ const CartForm: React.FC<TProps> = ({ setCartKisas }) => {
           <p className="titleCart">
             После отправки данных – с Вами свяжется наш помощник и объяснит
             дальнейшие действия
-            <Button width="lg" type="submit">
+            <Button width="lg" variant="colorBlue" type="submit">
               <p>Отправить</p>
             </Button>
           </p>
