@@ -72,7 +72,11 @@ const Header: React.FC<TProps> = ({ cartKisas }) => {
           {click ? (
             <FaTimes className="hamburgerIcon" />
           ) : (
-            <FaBars className="hamburgerIcon" />
+            <FaBars
+              className={
+                cartKisas.length ? "hamburgerIconRed" : "hamburgerIcon"
+              }
+            />
           )}
         </div>
       </div>

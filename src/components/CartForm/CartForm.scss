@@ -1,0 +1,37 @@
+.containerForm {
+  font-size: 1.2rem;
+
+  .formCart {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    max-width: 45rem;
+    min-width: 15.25rem;
+    text-align: center;
+
+    .contentForm {
+      margin-bottom: 0.625rem;
+      text-align: start;
+    }
+
+    .formData {
+      font-size: 1.2rem;
+      margin-bottom: 1.25rem;
+      padding: 0.625rem 1.125rem;
+      border-color: rgba(113, 165, 247, 0.9);
+      font-family: "Raleway", sans-serif;
+      resize: none;
+    }
+
+    .errorMassage {
+      font-size: 1rem;
+      color: red;
+      margin-top: -1.25rem;
+    }
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

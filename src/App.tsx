@@ -10,6 +10,7 @@ import InfoKisaPage from "./components/InfoKisaPage";
 import MainPage from "./pages/MainPage";
 
 import data from "./db.json";
+import KisaTake from "./components/KisaTake";
 
 export type TKisa = {
   id: number;
@@ -73,6 +74,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/kisa-take" element={<KisaTake />} />
       </Routes>
       <Footer />
     </div>
