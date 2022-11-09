@@ -1,11 +1,32 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 import Button from "../Button";
+import { TKisa } from "../../App";
+
 import "./CartForm.scss";
 
-const CartForm = () => {
+type TProps = {
+  setCartKisas: React.Dispatch<React.SetStateAction<TKisa[]>>;
+};
+
+const CartForm: React.FC<TProps> = ({ setCartKisas }) => {
+  const validate = Yup.object({
+    fullName: Yup.string()
+      .min(3, "*не менее 3 символов")
+      .required("*обязательно к заполнению"),
+    telephone: Yup.string()
+      .min(11, "*укажите полный мобильный номер телефона с 8")
+      .max(11, "*написано больше 11 символов")
+      .required("*обязательно к заполнению (11 символов)"),
+    email: Yup.string()
+      .email("*неверно указан e-mail")
+      .required("*обязательно к заполнению"),
+  });
+
+  const navigate = useNavigate();
+
   return (
     <Formik
       initialValues={{
@@ -14,20 +35,11 @@ const CartForm = () => {
         email: "",
         text: "",
       }}
-      validationSchema={Yup.object({
-        fullName: Yup.string()
-          .min(3, "*не менее 3 символов")
-          .required("*обязательно к заполнению"),
-        telephone: Yup.string()
-          .min(11, "*укажите полный мобильный номер телефона с 8")
-          .max(11, "*написано больше 11 символов")
-          .required("*обязательно к заполнению (11 символов)"),
-        email: Yup.string()
-          .email("*неверно указан e-mail")
-          .required("*обязательно к заполнению"),
-      })}
+      validationSchema={validate}
       onSubmit={(values) => {
         console.log("SUBMIT", values);
+        navigate("/kisa-take");
+        setCartKisas([]);
       }}
     >
       <div className="containerForm">

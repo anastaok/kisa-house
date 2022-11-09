@@ -47,7 +47,7 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
         ) : null}
       </div>
 
-      {cartKisas.length ? <CartForm /> : null}
+      {cartKisas.length ? <CartForm setCartKisas={setCartKisas} /> : null}
     </div>
   );
 };

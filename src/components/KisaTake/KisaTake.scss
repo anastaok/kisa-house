@@ -1,0 +1,17 @@
+.kisaTake {
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 58vh;
+
+  .titleKisaTake {
+    font-size: 1.3rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
