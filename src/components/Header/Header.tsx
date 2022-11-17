@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { useState } from "react";
 
-import "./Header.scss";
+import "./header.scss";
 import { TKisa } from "../../App";
 
 import { FaCat } from "react-icons/fa";
