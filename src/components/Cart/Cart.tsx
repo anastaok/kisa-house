@@ -52,7 +52,6 @@ const Cart: React.FC<TProps> = ({ cartKisas, setCartKisas }) => {
           ))
         ) : (
           <>
-            {" "}
             <p className="titleCart">{"Вы пока не осчатливили кис :("}</p>
             <Button width="lg" variant="colorBlue" onClick={backToHome}>
               {"Вернуться на главную"}
